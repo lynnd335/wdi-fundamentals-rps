@@ -22,25 +22,87 @@ function randomPlay() {
 ////////////////////////////////////////////////
 
 function getPlayerMove(move) {
-    // Write an expression that operates on a variable called `move`
-    // If a `move` has a value, your expression should evaluate to that value.
+    // Write an expression that operates on a variable called `move`. If a `move` has a value, your expression should evaluate to that value.
+    //
     // However, if `move` is not specified / is null, your expression should equal `getInput()`.
-    return /* Your Expression */;
+var m1;
+    if (move != null)
+    {
+      m1 = move;
+    }
+    else
+    {
+      m1 = getInput();
+    }
+    return m1;
 }
-
 function getComputerMove(move) {
     // Write an expression that operates on a variable called `move`
     // If a `move` has a value, your expression should evaluate to that value.
     // However, if `move` is not specified / is null, your expression should equal `randomPlay()`.
-    return /* Your Expression */;
+var m2;
+    if (move != null)
+    {
+      m2 = move;
+    }
+    else
+    {
+      m2 = randomPlay();
+    }
+    return m2;
+    }
 }
 
-function getWinner(playerMove,computerMove) {
+function getWinner(m1,m2) {
     var winner;
     // Write code that will set winner to either 'player', 'computer', or 'tie' based on the values of playerMove and computerMove.
     // Assume that the only values playerMove and computerMove can have are 'rock', 'paper', and 'scissors'.
     // The rules of the game are that 'rock' beats 'scissors', 'scissors' beats 'paper', and 'paper' beats 'rock'.
-    /* YOUR CODE HERE */
+    if (m1 = 'rock')
+    {
+      if (m2 = 'paper')
+      {
+        winner = 'computer';
+      }
+      if (m2 = 'scissors')
+      {
+        winner = 'player';
+      }
+      if (m2 = 'rock')
+      {
+        winner = 'tie';
+      }
+    }
+    if (m1 = 'paper')
+    {
+      if (m2 = 'paper')
+      {
+        winner = 'tie';
+      }
+      if (m2 = 'scissors')
+      {
+        winner = 'computer';
+      }
+      if (m2 = 'rock')
+      {
+        winner = 'player';
+      }
+    }
+    if (m1 = 'scissors')
+    {
+      if (m2 = 'paper')
+      {
+        winner = 'player';
+      }
+      if (m2 = 'scissors')
+      {
+        winner = 'tie';
+      }
+      if (m2 = 'rock')
+      {
+        winner = 'computer';
+      }
+    }
     return winner;
 }
 
@@ -52,4 +114,3 @@ function playToFive() {
     /* YOUR CODE HERE */
     return [playerWins, computerWins];
 }
-
