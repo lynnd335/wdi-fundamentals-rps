@@ -58,59 +58,40 @@ function getWinner(m1,m2) {
     // Write code that will set winner to either 'player', 'computer', or 'tie' based on the values of playerMove and computerMove.
     // Assume that the only values playerMove and computerMove can have are 'rock', 'paper', and 'scissors'.
     // The rules of the game are that 'rock' beats 'scissors', 'scissors' beats 'paper', and 'paper' beats 'rock'.
-    if (m1 = 'rock')
-    {
-      if (m2 = 'paper')
-      {
-        winner = 'computer';
-      }
-      if (m2 = 'scissors')
-      {
-        winner = 'player';
-      }
-      if (m2 = 'rock')
-      {
+    var oc = m1 + '/' + m2;
+    switch (oc){
+      case 'rock/paper':
+              winner = 'computer';
+              break;
+      case 'rock/scissors':
+              winner = 'player';
+              break;
+      case 'paper/scissors':
+              winner = 'computer';
+              break;
+      case 'paper/rock':
+              winner = 'player';
+              break;
+      case 'scissors/rock':
+              winner = 'computer';
+              break;
+      case 'scissors/paper':
+              winner = 'player';
+              break;
+        default:
         winner = 'tie';
-      }
-    }
-    if (m1 = 'paper')
-    {
-      if (m2 = 'paper')
-      {
-        winner = 'tie';
-      }
-      if (m2 = 'scissors')
-      {
-        winner = 'computer';
-      }
-      if (m2 = 'rock')
-      {
-        winner = 'player';
-      }
-    }
-    if (m1 = 'scissors')
-    {
-      if (m2 = 'paper')
-      {
-        winner = 'player';
-      }
-      if (m2 = 'scissors')
-      {
-        winner = 'tie';
-      }
-      if (m2 = 'rock')
-      {
-        winner = 'computer';
-      }
     }
     return winner;
 }
 
 function playToFive() {
     console.log("Let's play Rock, Paper, Scissors");
-    var playerWins = 0;
-    var computerWins = 0;
-    // Write code that plays 'Rock, Paper, Scissors' until either the player or the computer has won five times.
-    /* YOUR CODE HERE */
+    var pw = 0;
+    var cw = 0;
+    var ts = 0;
+    for (var tw = 0; tw <= 5; tw +=1)
+    {
+
+    }
     return [playerWins, computerWins];
 }
