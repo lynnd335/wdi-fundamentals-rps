@@ -86,12 +86,16 @@ function getWinner(m1,m2) {
 
 function playToFive() {
     console.log("Let's play Rock, Paper, Scissors");
-    var pw = 0;
-    var cw = 0;
-    var ts = 0;
-    for (var tw = 0; tw <= 5; tw +=1)
-    {
+    var playerWins = 0;
+    var computerWins = 0;
+    var totalPlays = 0;
+while (totalPlays => 5){
+    var PlayerMove = getPlayerMove(getPlayerMove(randomPlay()));
+    var computerMove = getComputerMove();
+    totalPlays += 1;
+    console.log('Player chose ' + playerMove + ' while Computer chose ' + computerMove);
+    console.log('The score is currently ' + playerWins + ' to ' + computerWins + '\n');
+  }
 
-    }
     return [playerWins, computerWins];
 }
